@@ -11,8 +11,6 @@
 
 // Each time you change one of the properties, the badge will refresh with your changes
 
-// TEST
-
 // Badge value to be display
 @property (nonatomic) NSString *badgeValue;
 // Badge background color
