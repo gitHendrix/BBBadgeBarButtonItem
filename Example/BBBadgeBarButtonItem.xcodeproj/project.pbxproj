@@ -60,6 +60,7 @@
 		5EC4E6AC18A55E9F00E06C09 /* ico-to-do-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-to-do-list@2x.png"; sourceTree = "<group>"; };
 		5EC4E6AF18A55EB600E06C09 /* BBBadgeBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBadgeBarButtonItem.h; sourceTree = "<group>"; };
 		5EC4E6B018A55EB600E06C09 /* BBBadgeBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBadgeBarButtonItem.m; sourceTree = "<group>"; };
+		F84E39DC18DCDA2F000E6E40 /* BBBadgeBarButtonItem.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = BBBadgeBarButtonItem.podspec; path = ../BBBadgeBarButtonItem.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 				5EC4E69718A55C5300E06C09 /* BBBadgeBarButtonItemTests */,
 				5EC4E67118A55C5300E06C09 /* Frameworks */,
 				5EC4E67018A55C5300E06C09 /* Products */,
+				F84E39DC18DCDA2F000E6E40 /* BBBadgeBarButtonItem.podspec */,
 			);
 			sourceTree = "<group>";
 		};
