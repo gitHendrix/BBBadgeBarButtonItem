@@ -7,17 +7,6 @@
 
 #import "BBBadgeBarButtonItem.h"
 
-// Default padding value for the badge
-static int const BBBadgeMargin = 6;
-// Minimum size badge to small
-static int const BBMinSize = 8;
-// Default offset for the badge
-
-// This are the default values for offseting the badge over the BarButtonItem you picked
-static int const BBoriginX = 7;
-static int const BBoriginY = -9;
-
-
 @interface BBBadgeBarButtonItem()
 
 // The badge displayed over the BarButtonItem
@@ -46,6 +35,17 @@ static int const BBoriginY = -9;
     self.badgeBGColor   = [UIColor redColor];
     self.badgeTextColor = [UIColor whiteColor];
     self.badgeFont      = [UIFont systemFontOfSize:12.0];
+    
+    // Default padding value for the badge
+    self.BBBadgeMargin = 6;
+    // Minimum size badge to small
+    self.BBMinSize = 8;
+    // Default offset for the badge
+    
+    // This are the default values for offseting the badge over the BarButtonItem you picked
+    self.BBoriginX = 7;
+    self.BBoriginY = -9;
+    
     self.shouldHideBadgeAtZero = YES;
     self.shouldAnimateBadge = YES;
     // Avoids badge to be clipped when animating its scale
@@ -61,6 +61,7 @@ static int const BBoriginY = -9;
     self.badge.textColor        = self.badgeTextColor;
     self.badge.backgroundColor  = self.badgeBGColor;
     self.badge.font             = self.badgeFont;
+    
 }
 
 // Handle the badge changing value
@@ -89,15 +90,15 @@ static int const BBoriginY = -9;
     // Make sure that for small value, the badge will be big enough
     float minHeight = expectedLabelSize.height;
     // Using a const we make sure the badge respect the minimum size
-    minHeight = (minHeight < BBMinSize) ? BBMinSize : expectedLabelSize.height;
+    minHeight = (minHeight < self.BBMinSize) ? self.BBMinSize : expectedLabelSize.height;
     float minWidth = expectedLabelSize.width;
     // Using const we make sure the badge doesn't get too smal
     minWidth = (minWidth < minHeight) ? minHeight : expectedLabelSize.width;
     
     // Animate the size modification if needed
     [UIView animateWithDuration:0.2 animations:^{
-        self.badge.frame = CGRectMake(BBoriginX, BBoriginY, minWidth + BBBadgeMargin, minHeight + BBBadgeMargin);
-        self.badge.layer.cornerRadius   = (minHeight + BBBadgeMargin) / 2;
+        self.badge.frame = CGRectMake(self.BBoriginX, self.BBoriginY, minWidth + self.BBBadgeMargin, minHeight + self.BBBadgeMargin);
+        self.badge.layer.cornerRadius   = (minHeight + self.BBBadgeMargin) / 2;
         self.badge.layer.masksToBounds = YES;
     }];
     
@@ -140,7 +141,7 @@ static int const BBoriginY = -9;
     // Otwhersise check if badge already exists
     else if(!self.badge) {
         // Create a new badge because not existing
-        self.badge                      = [[UILabel alloc] initWithFrame:CGRectMake(BBoriginX, BBoriginY, 20, 20)];
+        self.badge                      = [[UILabel alloc] initWithFrame:CGRectMake(self.BBoriginX, self.BBoriginY, 20, 20)];
         self.badge.textColor            = self.badgeTextColor;
         self.badge.backgroundColor      = self.badgeBGColor;
         self.badge.font                 = self.badgeFont;
@@ -177,5 +178,7 @@ static int const BBoriginY = -9;
         [self refreshBadge];
     }
 }
+
+
 
 @end

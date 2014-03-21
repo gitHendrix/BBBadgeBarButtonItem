@@ -20,6 +20,12 @@
 // Badge font
 @property (nonatomic) UIFont *badgeFont;
 
+@property int BBoriginX;
+@property int BBoriginY;
+
+@property int BBBadgeMargin;
+@property int BBMinSize;
+
 // In case of numbers, remove the badge when reaching zero
 @property BOOL shouldHideBadgeAtZero;
 // Badge has a bounce animation when value changes
