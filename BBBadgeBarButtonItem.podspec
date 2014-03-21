@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.screenshots      = "https://github.com/gitHendrix/BBBadgeBarButtonItem/blob/master/screenshot.png"
   s.license          = 'MIT'
   s.author           = { "TanguyAladenise" => "tanguy.aladenise@gmail.com" }
-  s.source           = { :git => "https://github.com/gitHendrix/BBBadgeBarButtonItem.git", :tag => '1.0' }
+  s.source           = { :git => "https://github.com/gitHendrix/BBBadgeBarButtonItem.git" }
   s.source_files = 'BBBadgeBarButtonItem/BBBadgeBarButtonItem.{h,m}'
   s.platform     = :ios, '6.0'
   s.requires_arc = true
